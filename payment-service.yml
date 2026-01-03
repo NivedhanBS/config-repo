@@ -13,19 +13,13 @@ spring:
     show-sql: true
 
   kafka:
-    bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
 payment:
   topic: payment-events
-  
+
 jwt:
   secret: paymentServiceSuperSecretKey_32chars_min_123456
   expiration: 3600000
